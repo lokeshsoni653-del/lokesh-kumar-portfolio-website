@@ -586,12 +586,12 @@
             <div class="hero__stat-n">3.00</div>
             <div class="hero__stat-l">CGPA</div>
           </div>
-          <a href="certifications.html" class="hero__stat-ieee" title="View IEEE Membership Certificate">
-            <div class="hero__stat-n hero__stat-n--ieee">
+          <a href="certifications.html" class="hero__stat-ieee" title="View IEEE Membership Certificate (# 99402233)">
+            <div class="hero__stat-n--ieee">
               <span class="ieee-glow-dot"></span>IEEE
             </div>
             <div class="hero__stat-l hero__stat-l--ieee">
-              Student Member <span class="ieee-mini-tag">Karachi ↗</span>
+              Student Member <span class="ieee-mini-tag"># 99402233 ↗</span>
             </div>
           </a>
         </div>
@@ -918,6 +918,7 @@
 document.querySelectorAll('.hero__stat-n').forEach(function(el) {
   var raw = el.textContent.trim();
   var target = parseFloat(raw);
+  if (isNaN(target)) return;
   var isDecimal = raw.includes('.');
   var suffix = raw.replace(/[\d.]/g, '');
   var started = false;
