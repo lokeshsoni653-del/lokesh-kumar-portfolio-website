@@ -995,3 +995,116 @@ html, body {
   white-space: nowrap !important;
   box-sizing: border-box !important;
 }
+
+/* ══════════════════════════════════════════════
+   MOBILE UI & RESPONSIVENESS PERFECT PASS
+   ══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Hero Section Mobile Enhancements */
+  .hero {
+    padding-top: calc(var(--nav-h, 70px) + 1.25rem) !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .hero__name {
+    font-size: clamp(2rem, 8vw, 2.8rem) !important;
+  }
+  .building-pill {
+    font-size: 0.72rem !important;
+    padding: 0.4rem 0.8rem !important;
+    max-width: 100% !important;
+    word-break: break-word !important;
+  }
+  .hero__actions {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+  }
+  .hero__actions .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Flagship Cards Mobile Ergonomics */
+  .flagship-showcase {
+    padding: 1.5rem 1.15rem !important;
+    gap: 1.25rem !important;
+    border-radius: 14px !important;
+  }
+  .flagship-showcase__title {
+    font-size: 1.4rem !important;
+  }
+  .flagship-showcase__btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Mobile Drawer Menu Ergonomics */
+  .nav__mobile {
+    background: rgba(10, 15, 30, 0.97) !important;
+    backdrop-filter: blur(16px) !important;
+    padding: 1.5rem 1.25rem !important;
+  }
+  .nav__mobile .nav__link {
+    padding: 0.75rem 0 !important;
+    font-size: 1.05rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Quick Stats 2x2 Clean Grid on Phones */
+  .hero__stats {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    justify-items: center !important;
+    align-items: stretch !important;
+  }
+  .hero__stats > div,
+  .hero__stat-ieee {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.6rem 0.5rem !important;
+    border-radius: var(--radius-md, 10px) !important;
+  }
+  .hero__stat-n--ieee {
+    justify-content: center !important;
+    font-size: 1.45rem !important;
+  }
+  .hero__stat-l--ieee {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Certifications Cards Mobile Layout */
+  .nestgen-master-card {
+    padding: 1.35rem 1.1rem !important;
+  }
+  .nestgen-mc__title {
+    font-size: 1.15rem !important;
+  }
+  .nestgen-mc__cta {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .cert-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+}
