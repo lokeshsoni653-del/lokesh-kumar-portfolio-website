@@ -947,6 +947,51 @@ html, body {
 
 
 /* Performance & Core Web Vitals Optimization */
-.hero, .page-header { content-visibility: auto; contain-intrinsic-size: 1000px; }
-img { content-visibility: auto; }
+
+
 .lk-chat__toggle { will-change: transform; transform: translateZ(0); }
+
+
+/* Uniform Button Layout Fix */
+.btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 42px !important;
+  padding: 0 1.25rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-md, 8px) !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+  transition: all 0.25s var(--ease-out, ease);
+  text-decoration: none !important;
+}
+
+.hero__actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.nav__desktop-ctas {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+}
+
+.nav__cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 36px !important;
+  padding: 0 0.95rem !important;
+  font-size: 0.825rem !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-sm, 6px) !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
