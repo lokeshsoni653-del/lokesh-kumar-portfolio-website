@@ -58,6 +58,97 @@
     .hero__stat-n { font-family: var(--ff-serif); font-size: 2rem; letter-spacing: -0.02em; }
     .hero__stat-l { font-size: 0.8rem; color: var(--clr-muted); }
 
+    /* IEEE Hero Badges & Stats Highlights */
+    .ieee-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: linear-gradient(135deg, rgba(0, 98, 155, 0.16) 0%, rgba(0, 128, 198, 0.06) 100%);
+      border: 1px solid rgba(0, 128, 198, 0.35);
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #63B3ED;
+      box-shadow: 0 0 15px rgba(0, 98, 155, 0.15);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .ieee-hero-badge:hover {
+      transform: translateY(-2px);
+      border-color: #38BDF8;
+      background: linear-gradient(135deg, rgba(0, 98, 155, 0.3) 0%, rgba(0, 128, 198, 0.18) 100%);
+      box-shadow: 0 4px 20px rgba(0, 128, 198, 0.35);
+      color: #FFF;
+    }
+    .ieee-hero-badge__section {
+      font-size: 0.68rem;
+      font-weight: 600;
+      opacity: 0.9;
+      background: rgba(0, 128, 198, 0.22);
+      border: 1px solid rgba(0, 128, 198, 0.3);
+      padding: 0.12rem 0.45rem;
+      border-radius: 100px;
+      color: #90CDF4;
+    }
+
+    .hero__stat-ieee {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-md, 10px);
+      background: linear-gradient(135deg, rgba(0, 98, 155, 0.14) 0%, rgba(0, 128, 198, 0.05) 100%);
+      border: 1px solid rgba(0, 128, 198, 0.3);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 128, 198, 0.1);
+      margin-top: -0.2rem;
+    }
+    .hero__stat-ieee:hover {
+      transform: translateY(-3px);
+      border-color: #38BDF8;
+      background: linear-gradient(135deg, rgba(0, 98, 155, 0.28) 0%, rgba(0, 128, 198, 0.16) 100%);
+      box-shadow: 0 6px 22px rgba(0, 128, 198, 0.35);
+    }
+    .hero__stat-n--ieee {
+      font-family: var(--ff-serif);
+      font-size: 1.6rem !important;
+      font-weight: 800;
+      color: #63B3ED !important;
+      line-height: 1.1;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .ieee-glow-dot {
+      width: 7px;
+      height: 7px;
+      background: #38BDF8;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #38BDF8;
+      display: inline-block;
+    }
+    .hero__stat-l--ieee {
+      font-size: 0.76rem !important;
+      color: #90CDF4 !important;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-top: 0.15rem;
+    }
+    .ieee-mini-tag {
+      font-size: 0.65rem;
+      padding: 0.08rem 0.4rem;
+      border-radius: 4px;
+      background: rgba(0, 128, 198, 0.25);
+      border: 1px solid rgba(0, 128, 198, 0.35);
+      color: #E2E8F0;
+      font-weight: 700;
+    }
+
     /* Avatar */
     .hero__avatar-wrap {
       position: relative; flex-shrink: 0;
@@ -443,9 +534,16 @@
   <div class="container">
     <div class="hero__grid">
       <div>
-        <div class="hero__label animate-fade-up">
-          <span class="hero__label-dot"></span>
-          <span class="label">Available for Opportunities</span>
+        <div style="display: flex; gap: 0.65rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.85rem;" class="animate-fade-up">
+          <div class="hero__label" style="margin-bottom: 0;">
+            <span class="hero__label-dot"></span>
+            <span class="label">Available for Opportunities</span>
+          </div>
+          <a href="certifications.html" class="ieee-hero-badge" title="View IEEE Membership Certificate">
+            <span class="ieee-hero-badge__emblem">🔷</span>
+            <span class="ieee-hero-badge__text">IEEE Student Member</span>
+            <span class="ieee-hero-badge__section">Karachi Section ↗</span>
+          </a>
         </div>
         <div class="building-pill animate-fade-up">
           <span class="building-pill__dot"></span>
@@ -488,6 +586,14 @@
             <div class="hero__stat-n">3.00</div>
             <div class="hero__stat-l">CGPA</div>
           </div>
+          <a href="certifications.html" class="hero__stat-ieee" title="View IEEE Membership Certificate">
+            <div class="hero__stat-n hero__stat-n--ieee">
+              <span class="ieee-glow-dot"></span>IEEE
+            </div>
+            <div class="hero__stat-l hero__stat-l--ieee">
+              Student Member <span class="ieee-mini-tag">Karachi ↗</span>
+            </div>
+          </a>
         </div>
       </div>
       <!-- Avatar -->
