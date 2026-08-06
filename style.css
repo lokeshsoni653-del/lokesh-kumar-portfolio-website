@@ -525,8 +525,12 @@ body::-webkit-scrollbar {
 [data-theme="dark"] .feat-card__desc { color: #8b949e; }
 [data-theme="dark"] .feat-card__link { color: #58a6ff; }
 
-/* ——— Hero avatar fallback (when image is missing) ——— */
-.hero__avatar-img { background: linear-gradient(135deg, #1e3a8a, #2563EB); }
+/* ——— Hero avatar & About photo transparent background styling ——— */
+.hero__avatar-img, .about-photo {
+  background: transparent !important;
+  object-fit: cover !important;
+  object-position: top center !important;
+}
 
 /* ══════════════════════════════════════════════
    FINAL POLISH — LOVELY LAST TOUCHES
@@ -890,7 +894,10 @@ html, body {
   }
   
   .hero__avatar-wrap {
-    display: none !important;
+    display: block !important;
+    max-width: 260px !important;
+    width: 100% !important;
+    margin: 1rem auto 1.5rem !important;
   }
   
   .hero__label {
