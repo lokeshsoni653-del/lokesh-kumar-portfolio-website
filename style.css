@@ -71,11 +71,25 @@ a  { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-/* ——— Scrollbar ——— */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--clr-bg); }
-::-webkit-scrollbar-thumb { background: var(--clr-border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--clr-muted); }
+/* ——— Scrollbar Reset — Hide All Scroll Lines Completely ——— */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+*::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+  display: none !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-thumb {
+  background: transparent !important;
+  border: none !important;
+}
 
 /* Selection */
 ::selection { background: rgba(37,99,235,0.15); color: var(--clr-text); }
@@ -518,11 +532,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
    FINAL POLISH — LOVELY LAST TOUCHES
    ══════════════════════════════════════════════ */
 
-/* ——— Custom Scrollbar ——— */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--clr-border); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: var(--clr-accent); }
+/* ——— Custom Scrollbar (Hidden globally for edge-to-edge look) ——— */
 
 /* ——— Scroll Progress Bar ——— */
 #scroll-progress {
@@ -1009,18 +1019,18 @@ html, body {
    MOBILE UI & RESPONSIVENESS PERFECT PASS
    ══════════════════════════════════════════════ */
 
-/* Issue 1: Footer Padding for Floating Buttons Clearance */
+/* Issue 1: Footer Padding for Floating Buttons Clearance (Sleek & Reduced) */
 .footer {
-  padding-bottom: 9.5rem !important; /* ~152px clearance for floating action bar buttons */
+  padding-bottom: 5.5rem !important; /* ~88px clearance for floating action bar buttons */
   position: relative;
   z-index: 1;
 }
 .footer__inner, .footer__bottom {
-  padding-bottom: 3.5rem !important;
+  padding-bottom: 1rem !important;
 }
 .footer__copy {
-  margin-bottom: 3rem !important;
-  padding-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 /* Wide Blue Action Button ("View All 57+ Live Projects...") */
@@ -1110,13 +1120,13 @@ html, body {
     padding-right: 1.25rem !important;
   }
 
-  /* Issue 1: Mobile Footer Extra Clearance */
+  /* Issue 1: Mobile Footer Reduced Extra Clearance */
   .footer {
-    padding-bottom: 12rem !important; /* ~190px clearance so copyright text is 100% unblocked on mobile */
+    padding-bottom: 6rem !important; /* Reduced to ~96px so footer is compact & unblocked on mobile */
   }
   .footer__copy {
-    margin-bottom: 4.5rem !important;
-    padding-bottom: 3rem !important;
+    margin-bottom: 1.25rem !important;
+    padding-bottom: 0.5rem !important;
   }
 
   /* Issue 2: Mobile Button Text Wrapping & Width Constraint */
