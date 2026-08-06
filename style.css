@@ -525,9 +525,10 @@ body::-webkit-scrollbar {
 [data-theme="dark"] .feat-card__desc { color: #8b949e; }
 [data-theme="dark"] .feat-card__link { color: #58a6ff; }
 
-/* ——— Hero avatar & About photo transparent background styling ——— */
+/* ——— Hero avatar & About photo HD crisp rendering styling ——— */
 .hero__avatar-img, .about-photo {
-  background: transparent !important;
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
   object-fit: cover !important;
   object-position: top center !important;
 }
