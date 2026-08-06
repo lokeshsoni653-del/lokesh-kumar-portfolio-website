@@ -1019,18 +1019,18 @@ html, body {
    MOBILE UI & RESPONSIVENESS PERFECT PASS
    ══════════════════════════════════════════════ */
 
-/* Issue 1: Footer Padding for Floating Buttons Clearance (Sleek & Reduced) */
+/* Issue 1: Footer Padding Restored to Original Sleek Spacing */
 .footer {
-  padding-bottom: 5.5rem !important; /* ~88px clearance for floating action bar buttons */
+  padding: 2.5rem 0 3rem !important;
   position: relative;
   z-index: 1;
 }
 .footer__inner, .footer__bottom {
-  padding-bottom: 1rem !important;
+  padding-bottom: 0 !important;
 }
 .footer__copy {
-  margin-bottom: 1rem !important;
-  padding-bottom: 0.5rem !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Wide Blue Action Button ("View All 57+ Live Projects...") */
@@ -1120,13 +1120,13 @@ html, body {
     padding-right: 1.25rem !important;
   }
 
-  /* Issue 1: Mobile Footer Reduced Extra Clearance */
+  /* Footer Padding Restored to Original Sleek Size */
   .footer {
-    padding-bottom: 6rem !important; /* Reduced to ~96px so footer is compact & unblocked on mobile */
+    padding-bottom: 3.5rem !important;
   }
   .footer__copy {
-    margin-bottom: 1.25rem !important;
-    padding-bottom: 0.5rem !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   /* Issue 2: Mobile Button Text Wrapping & Width Constraint */
