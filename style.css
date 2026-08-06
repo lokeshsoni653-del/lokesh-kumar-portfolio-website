@@ -47,6 +47,10 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 body {
@@ -55,6 +59,11 @@ body {
   color: var(--clr-text);
   line-height: 1.6;
   min-height: 100vh;
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  position: relative !important;
+  box-sizing: border-box !important;
 }
 
 img { max-width: 100%; display: block; }
@@ -65,7 +74,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ——— Scrollbar ——— */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--clr-bg); }
-::-webkit-scrollbar-thumb { background: #d0ccc5; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: var(--clr-border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--clr-muted); }
 
 /* Selection */
@@ -1067,8 +1076,35 @@ html, body {
 @media (max-width: 768px) {
   html, body {
     overflow-x: hidden !important;
+    max-width: 100vw !important;
     width: 100% !important;
+    box-sizing: border-box !important;
+    scrollbar-width: none !important; /* Firefox: Hide scrollbar track on mobile */
+    -ms-overflow-style: none !important; /* IE/Edge: Hide scrollbar track on mobile */
   }
+
+  /* HIDE ALL CUSTOM SCROLLBARS & TRACKS ON MOBILE FOR A FLAWLESS EDGE-TO-EDGE LOOK */
+  ::-webkit-scrollbar {
+    width: 0px !important;
+    height: 0px !important;
+    display: none !important;
+    background: transparent !important;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+    border: none !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .container, .section, .nav, .footer, .hero, .tech-strip, .nestgen-banner, .flagship-showcase, #scroll-progress {
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   .container {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
