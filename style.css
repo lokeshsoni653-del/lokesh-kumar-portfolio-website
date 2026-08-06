@@ -999,6 +999,44 @@ html, body {
 /* ══════════════════════════════════════════════
    MOBILE UI & RESPONSIVENESS PERFECT PASS
    ══════════════════════════════════════════════ */
+
+/* Issue 1: Footer Padding for Floating Buttons Clearance */
+.footer {
+  padding-bottom: 7.5rem !important; /* Generous clearance for floating chat & resume buttons */
+  position: relative;
+  z-index: 1;
+}
+.footer__inner, .footer__bottom {
+  padding-bottom: 2rem !important;
+}
+
+/* Issue 2: Universal Button Text Wrapping & Max-Width Protection */
+.btn, a.btn, button.btn, .btn-all-projects, .flagship-showcase__btn, .hero__actions .btn {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Issue 3: Contact Cards Overflow Protection */
+.contact-layout, .contact-info, .contact-item, .contact-card, .form-card, .interest-item {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.contact-item__value, .contact-item__value a {
+  word-break: break-all !important;
+  overflow-wrap: anywhere !important;
+  max-width: 100% !important;
+}
+
+/* Issue 4: Header Nav Breathing Room & Container Padding */
+.nav__inner {
+  padding-left: 1.25rem !important;
+  padding-right: 1.5rem !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
 @media (max-width: 768px) {
   html, body {
     overflow-x: hidden !important;
@@ -1007,6 +1045,45 @@ html, body {
   .container {
     padding-left: 1.25rem !important;
     padding-right: 1.25rem !important;
+  }
+
+  /* Issue 1: Mobile Footer Extra Clearance */
+  .footer {
+    padding-bottom: 9.5rem !important; /* ~150px clearance so copyright text is 100% unblocked on mobile */
+  }
+
+  /* Issue 2: Mobile Button Text Wrapping */
+  .btn, a.btn, button.btn, .btn-all-projects, .flagship-showcase__btn, .hero__actions .btn {
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    height: auto !important;
+    min-height: 44px !important;
+    padding: 0.75rem 1rem !important;
+    text-align: center !important;
+    line-height: 1.35 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Issue 4: Hamburger Menu Placement & Header Layout */
+  .nav__desktop-ctas,
+  .nav__inner > div[style*="display: flex"] {
+    display: none !important;
+  }
+
+  .nav__hamburger, #hamburger {
+    display: flex !important;
+    margin-left: 0.75rem !important;
+    margin-right: 0.5rem !important;
+    padding: 8px !important;
+    flex-shrink: 0 !important;
+    z-index: 101 !important;
+  }
+
+  .dark-toggle {
+    margin-left: auto !important;
   }
 
   /* Hero Section Mobile Enhancements */
@@ -1028,11 +1105,6 @@ html, body {
     flex-direction: column !important;
     gap: 0.65rem !important;
   }
-  .hero__actions .btn {
-    width: 100% !important;
-    max-width: 100% !important;
-    justify-content: center !important;
-  }
 
   /* Flagship Cards Mobile Ergonomics */
   .flagship-showcase {
@@ -1042,11 +1114,6 @@ html, body {
   }
   .flagship-showcase__title {
     font-size: 1.4rem !important;
-  }
-  .flagship-showcase__btn {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
   }
 
   /* Mobile Drawer Menu Ergonomics */
@@ -1059,6 +1126,34 @@ html, body {
     padding: 0.75rem 0 !important;
     font-size: 1.05rem !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  /* Issue 3: Contact Cards Mobile Layout */
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 2rem !important;
+  }
+  .contact-info, .form-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 1.25rem !important;
+    position: static !important;
+  }
+  .contact-item {
+    padding: 0.9rem 1rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    flex-wrap: wrap !important;
+  }
+  .contact-item > div {
+    min-width: 0 !important;
+    flex: 1 !important;
+    max-width: 100% !important;
   }
 }
 
