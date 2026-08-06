@@ -1002,12 +1002,39 @@ html, body {
 
 /* Issue 1: Footer Padding for Floating Buttons Clearance */
 .footer {
-  padding-bottom: 7.5rem !important; /* Generous clearance for floating chat & resume buttons */
+  padding-bottom: 9.5rem !important; /* ~152px clearance for floating action bar buttons */
   position: relative;
   z-index: 1;
 }
 .footer__inner, .footer__bottom {
+  padding-bottom: 3.5rem !important;
+}
+.footer__copy {
+  margin-bottom: 3rem !important;
   padding-bottom: 2rem !important;
+}
+
+/* Wide Blue Action Button ("View All 57+ Live Projects...") */
+.btn-all-projects {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 4px 18px rgba(37,99,235,0.4);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  transition: all 0.3s ease;
+}
+.btn-all-projects:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.5);
 }
 
 /* Issue 2: Universal Button Text Wrapping & Max-Width Protection */
@@ -1049,11 +1076,33 @@ html, body {
 
   /* Issue 1: Mobile Footer Extra Clearance */
   .footer {
-    padding-bottom: 9.5rem !important; /* ~150px clearance so copyright text is 100% unblocked on mobile */
+    padding-bottom: 12rem !important; /* ~190px clearance so copyright text is 100% unblocked on mobile */
+  }
+  .footer__copy {
+    margin-bottom: 4.5rem !important;
+    padding-bottom: 3rem !important;
   }
 
-  /* Issue 2: Mobile Button Text Wrapping */
-  .btn, a.btn, button.btn, .btn-all-projects, .flagship-showcase__btn, .hero__actions .btn {
+  /* Issue 2: Mobile Button Text Wrapping & Width Constraint */
+  .btn-all-projects {
+    display: flex !important;
+    width: calc(100% - 2rem) !important;
+    max-width: calc(100% - 2rem) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    text-align: center !important;
+    padding: 0.85rem 1.25rem !important;
+    font-size: 0.925rem !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .btn, a.btn, button.btn, .flagship-showcase__btn, .hero__actions .btn {
     white-space: normal !important;
     word-break: break-word !important;
     overflow-wrap: anywhere !important;
