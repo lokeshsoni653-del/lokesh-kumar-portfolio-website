@@ -154,37 +154,45 @@
       position: relative; flex-shrink: 0;
       display: flex; align-items: center; justify-content: center;
     }
-    /* Decorative glow behind photo */
+    /* Decorative glowing backdrop aura behind photo */
     .hero__avatar-wrap::before {
       content: '';
       position: absolute;
-      width: 340px; height: 340px;
+      width: 380px; height: 460px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(37, 99, 235, 0.2) 45%, transparent 70%);
+      filter: blur(12px);
       z-index: 0;
+      animation: pulseGlow 4s ease-in-out infinite alternate;
     }
-    /* Rotating accent ring */
+    @keyframes pulseGlow {
+      0% { opacity: 0.6; transform: scale(0.96); }
+      100% { opacity: 1; transform: scale(1.04); }
+    }
+    /* Rotating vibrant dashed accent ring */
     .hero__avatar-wrap::after {
       content: '';
       position: absolute;
-      width: 330px; height: 430px;
+      width: 340px; height: 440px;
       border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
-      border: 2px dashed rgba(37,99,235,0.18);
+      border: 2.5px dashed #38BDF8;
+      filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.65));
       animation: morphRing 8s ease-in-out infinite;
       z-index: 0;
+      opacity: 0.85;
     }
     @keyframes morphRing {
       0%,100% { border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%; transform: rotate(0deg); }
-      33%  { border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%; transform: rotate(5deg); }
-      66%  { border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%; transform: rotate(-5deg); }
+      33%  { border-radius: 55% 45% 40% 60% / 45% 55% 45% 55%; transform: rotate(6deg); }
+      66%  { border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%; transform: rotate(-6deg); }
     }
     .hero__avatar-img {
       position: relative; z-index: 1;
       width: 300px; height: 390px;
       border-radius: 28px;
       object-fit: cover; object-position: top center;
-      border: 3px solid rgba(37,99,235,0.15);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.12), 0 8px 24px rgba(37,99,235,0.08);
+      border: 3px solid rgba(56, 189, 248, 0.45);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5), 0 0 35px rgba(56, 189, 248, 0.3);
       transition: transform 0.4s var(--ease-out), box-shadow 0.4s;
     }
     .hero__avatar-wrap:hover .hero__avatar-img {
