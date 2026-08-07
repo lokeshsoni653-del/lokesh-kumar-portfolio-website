@@ -1306,3 +1306,79 @@ html, body {
     gap: 1.25rem !important;
   }
 }
+
+
+/* ══════════════════════════════════════════════
+   MOBILE UI PERFECTION & TOUCH ERGONOMICS ENGINE
+   ══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Prevent any element horizontal overflow */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+  
+  /* Touch target sizes for optimal mobile usability */
+  .btn, .nav__link, .nav__cta, .honors-cta-btn, .nestgen-mc__cta, .lk-chat__quick-chip {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Smooth mobile navigation drawer */
+  .nav__mobile {
+    backdrop-filter: blur(16px) !important;
+    background: rgba(10, 15, 30, 0.95) !important;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Responsive tables with smooth touch scrolling */
+  table, .marks-table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Floating back-to-top button positioning above fixed mobile action bar */
+  .back-to-top, #backToTop {
+    bottom: 5.5rem !important;
+    right: 1.25rem !important;
+    z-index: 99 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero Avatar responsive scaling for small phone viewports */
+  .hero__avatar-wrap {
+    max-width: 250px !important;
+    margin: 1.25rem auto !important;
+  }
+  .hero__avatar-wrap::before {
+    width: 280px !important;
+    height: 320px !important;
+  }
+  .hero__avatar-wrap::after {
+    width: 270px !important;
+    height: 330px !important;
+  }
+  .hero__avatar-img {
+    width: 240px !important;
+    height: 310px !important;
+    border-radius: 22px !important;
+  }
+  .hero__avatar-badge {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: -0.8rem !important;
+    font-size: 0.72rem !important;
+    padding: 0.5rem 0.85rem !important;
+  }
+  .hero__avatar-tech {
+    right: 0.25rem !important;
+    top: 0.5rem !important;
+    font-size: 0.68rem !important;
+  }
+}
