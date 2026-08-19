@@ -1,0 +1,22 @@
+Secondary School Certificate</h2>
+        <div class="edu-card__field">Pre-Medical (HSC-II)</div>
+        <div class="edu-card__institution">Govt. (B) Degree College Mithi, Tharparkar | BISE Mirpurkhas</div>
+        <div class="edu-card__meta">
+          <div class="edu-card__stat">
+            <span class="edu-card__stat-icon">📅</span>
+            <span>Annual Examination 2023 (Improved)</span>
+          </div>
+          <div class="edu-card__stat">
+            <span class="edu-card__stat-icon">🎫</span>
+            <span>Seat No. 47163</span>
+          </div>
+        </div>
+
+        <div class="score-card" style="margin-top:1rem">
+          <div class="score-card__pct">94.18%</div>
+          <div class="score-card__label">1036 / 1100 Total Marks</div>
+          <div><span class="score-card__grade">🏆 Grade A-1</span></div>
+        </div>
+
+        <div style="margin-top:1.25rem">
+          <a href="https://freeimage.host/i/CreUmKv" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;background:linear-gradient(135deg, #0284c7, #2563eb);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:0.82rem;font-weight:700;padding:0.55rem 1.25rem;border
