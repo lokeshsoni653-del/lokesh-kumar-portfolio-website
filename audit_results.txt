@@ -1,0 +1,26 @@
+=== SUBDIRECTORIES AUDIT ===
+[FOUND] assets
+[MISSING FROM WEBSITE] career-hub
+[FOUND] cphgc-gridmaster
+[FOUND] disco-lytix
+[FOUND] economic_simulator
+[FOUND] faysal-halalvest
+[FOUND] giga-space
+[FOUND] gov-portal
+[FOUND] gtr-treadlogix
+[FOUND] ismmart-agrosync
+[FOUND] nestle-lytix
+[FOUND] pasha-connect
+[FOUND] qvp-compute
+[FOUND] tahafuz-path
+[FOUND] tcf-baghbaan-portal
+[FOUND] vital-retail
+
+=== HTML CASE STUDY FILES AUDIT ===
+[LINKED CASE STUDY] aimh-simulation.html
+[UNLINKED CASE STUDY] gensales-ai.html
+[LINKED CASE STUDY] hyundai-smartdealership.html
+[UNLINKED CASE STUDY] pepsi-utilities-optimizer.html
+[UNLINKED CASE STUDY] pstd-talentloom.html
+[LINKED CASE STUDY] telenor-energy-optimizer.html
+[LINKED CASE STUDY] telenor-sentinel.html
