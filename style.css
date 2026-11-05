@@ -2296,3 +2296,265 @@ html, body {
   color: #6ee7b7;
   border-color: #34d399;
 }
+
+
+/* ══════════════════════════════════════════════
+   PREMIUM REDESIGNED NAVBAR ARCHITECTURE
+   ══════════════════════════════════════════════ */
+.nav {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 100 !important;
+  height: 68px !important;
+  background: var(--clr-nav-bg, rgba(10, 15, 30, 0.85)) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--clr-border) !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.nav.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  background: var(--clr-surface) !important;
+}
+
+[data-theme="dark"] .nav.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.nav__inner {
+  max-width: 1440px !important;
+  width: 100% !important;
+  margin-inline: auto !important;
+  padding-inline: clamp(1rem, 2.5vw, 2.25rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1.25rem !important;
+  box-sizing: border-box !important;
+}
+
+.nav__logo {
+  font-family: var(--ff-serif) !important;
+  font-size: 1.35rem !important;
+  letter-spacing: -0.01em !important;
+  font-weight: 700 !important;
+  color: var(--clr-text) !important;
+  text-decoration: none !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.nav__logo:hover {
+  transform: scale(1.02) !important;
+}
+
+.nav__logo span {
+  color: #0284c7 !important;
+}
+
+[data-theme="dark"] .nav__logo span {
+  color: #38bdf8 !important;
+}
+
+/* Center Navigation Links */
+.nav__links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.15rem !important;
+  flex-shrink: 1 !important;
+}
+
+.nav__link {
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+  color: var(--clr-muted) !important;
+  padding: 0.36rem 0.62rem !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav__link:hover {
+  color: var(--clr-text) !important;
+  background: var(--clr-tag-bg) !important;
+}
+
+.nav__link.active {
+  color: #0284c7 !important;
+  background: rgba(2, 132, 199, 0.08) !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .nav__link.active {
+  color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.12) !important;
+}
+
+/* Right Actions Container */
+.nav__actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.55rem !important;
+  flex-shrink: 0 !important;
+}
+
+.nav__desktop-ctas {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+}
+
+/* Modern Unified Button Geometry */
+.nav__cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.35rem !important;
+  height: 34px !important;
+  padding: 0 0.8rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  border-radius: 7px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+}
+
+/* 1. Scholar Button */
+.nav__cta-btn--scholar {
+  background: rgba(66, 133, 244, 0.08) !important;
+  border: 1px solid rgba(66, 133, 244, 0.28) !important;
+  color: #1d4ed8 !important;
+}
+
+.nav__cta-btn--scholar:hover {
+  background: rgba(66, 133, 244, 0.18) !important;
+  border-color: #2563eb !important;
+  color: #1e40af !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 3px 10px rgba(66, 133, 244, 0.15) !important;
+}
+
+[data-theme="dark"] .nav__cta-btn--scholar {
+  background: rgba(66, 133, 244, 0.14) !important;
+  border-color: rgba(96, 165, 250, 0.35) !important;
+  color: #60a5fa !important;
+}
+
+[data-theme="dark"] .nav__cta-btn--scholar:hover {
+  background: rgba(66, 133, 244, 0.25) !important;
+  border-color: #60a5fa !important;
+  color: #93c5fd !important;
+  box-shadow: 0 3px 12px rgba(66, 133, 244, 0.25) !important;
+}
+
+/* 2. Resume Button */
+.nav__cta-btn--resume {
+  background: var(--clr-surface) !important;
+  border: 1px solid var(--clr-border) !important;
+  color: var(--clr-text) !important;
+}
+
+.nav__cta-btn--resume:hover {
+  border-color: #0284c7 !important;
+  color: #0284c7 !important;
+  background: rgba(2, 132, 199, 0.04) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="dark"] .nav__cta-btn--resume {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .nav__cta-btn--resume:hover {
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.08) !important;
+  box-shadow: 0 3px 12px rgba(56, 189, 248, 0.15) !important;
+}
+
+/* 3. Hire Me Button */
+.nav__cta-btn--hire {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3) !important;
+}
+
+.nav__cta-btn--hire:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #1d4ed8 100%) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .nav__cta-btn--hire {
+  background: linear-gradient(135deg, #0284c7 0%, #1d4ed8 100%) !important;
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.25) !important;
+}
+
+[data-theme="dark"] .nav__cta-btn--hire:hover {
+  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%) !important;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.4) !important;
+}
+
+/* 4. Elegant Vertical Divider */
+.nav__divider {
+  display: inline-block !important;
+  width: 1px !important;
+  height: 20px !important;
+  background: var(--clr-border) !important;
+  margin: 0 0.2rem !important;
+  opacity: 0.8 !important;
+  flex-shrink: 0 !important;
+}
+
+/* 5. Dark Toggle Alignment */
+.dark-toggle {
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  cursor: pointer !important;
+}
+
+/* 6. Responsive Breakdown */
+@media (max-width: 1200px) {
+  .nav__inner {
+    gap: 0.75rem !important;
+    padding-inline: 1rem !important;
+  }
+  .nav__link {
+    font-size: 0.76rem !important;
+    padding: 0.32rem 0.48rem !important;
+  }
+  .nav__cta-btn {
+    padding: 0 0.65rem !important;
+    font-size: 0.76rem !important;
+  }
+}
+
+@media (max-width: 1040px) {
+  .nav__links {
+    display: none !important;
+  }
+  .nav__desktop-ctas {
+    display: none !important;
+  }
+  .nav__divider {
+    display: none !important;
+  }
+  .nav__hamburger, #hamburger {
+    display: flex !important;
+  }
+}
