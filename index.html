@@ -613,8 +613,9 @@
         </div>
         <div class="hero__stats animate-fade-up delay-5">
           <div>
-            <div class="hero__stat-n">57</div>
-            <div class="hero__stat-l">Live Projects</div>
+            <div class="hero__stat-n">4</div>
+            <div class="hero__stat-l">Flagship Systems</div>
+            <div style="font-size: 0.68rem; color: var(--clr-muted); margin-top: 2px;">12 Featured · 40+ Repos</div>
           </div>
           <div>
             <div class="hero__stat-n">7+</div>
@@ -641,7 +642,7 @@
           <span class="dot"></span>
           Open to Internships &amp; Roles
         </div>
-        <div class="hero__avatar-tech">🚀 57 Live Projects</div>
+        <div class="hero__avatar-tech">🔬 4 Flagship Systems · 4 DOIs</div>
       </div>
     </div><!-- end hero__grid -->
 
@@ -698,8 +699,8 @@
 <section class="featured">
   <div class="container">
     <div class="sec-header reveal">
-      <p class="label sec-header__label">Flagship Projects</p>
-      <h2 class="sec-header__title">5 Showcase Systems</h2>
+      <p class="label sec-header__label">Tier 1 &amp; Tier 2 Systems</p>
+      <h2 class="sec-header__title">Flagship Engineering &amp; National Platforms</h2>
       <div class="sec-header__line"></div>
     </div>
 
@@ -834,7 +835,7 @@
     <!-- Explore Full Catalog CTA -->
     <div style="text-align: center; margin-top: 3rem; margin-bottom: 2rem;" class="reveal">
       <a href="projects.html" class="btn btn--primary" style="padding: 1rem 2.25rem; font-size: 1rem; font-weight: 700; background: linear-gradient(135deg, #0284c7, #2563eb); border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 4px 20px rgba(2,132,199,0.35); text-decoration: none; border-radius: 8px;">
-        🚀 Explore All 94+ Production Systems in Catalog →
+        🚀 Explore All 4 Flagship Systems, National Platforms &amp; Repositories →
       </a>
     </div>
 
@@ -847,8 +848,8 @@
     <div class="featured__cards">
       <a href="projects.html" class="feat-card reveal">
         <div class="feat-card__icon">🚀</div>
-        <div class="feat-card__title">Projects</div>
-        <p class="feat-card__desc">Interactive data apps — supply chain routing, telematics dashboards, RAG pipelines — all live on Streamlit.</p>
+        <div class="feat-card__title">Flagship Systems &amp; Projects</div>
+        <p class="feat-card__desc">4 Flagship Applied Systems (Agri-IDAS, Dhatki NLP, Cyber-Extortion, S-Jeewlani) &amp; National Platforms (PSO, MCB, Sukkur IBA).</p>
         <span class="feat-card__link">Explore →</span>
       </a>
       <a href="research.html" class="feat-card reveal delay-1">
@@ -892,7 +893,7 @@
 
     <div class="container" style="text-align: center; margin: 3.5rem auto 2.5rem; width: 100%; box-sizing: border-box;">
       <a href="projects.html" class="btn-all-projects">
-        🚀 View All 57+ Live Projects &amp; Interactive Dashboards →
+        🚀 View 4 Flagship Systems &amp; National Platforms →
       </a>
     </div>
 </section>
@@ -1153,7 +1154,7 @@ document.querySelectorAll('.featured__cards .feat-card').forEach(function(card, 
 <script>
 (function() {
   var CHAT_API_URL = 'https://lokesh-portfolio-bot.vercel.app/api/chat';
-  var GREETING = "Hi! I'm Lokesh's AI assistant. I know everything about his 57+ projects, skills, experience, and availability. What would you like to know? 🚀";
+  var GREETING = "Hi! I'm Lokesh's AI assistant. Ask me about his 4 Flagship Engineering Systems, 4 CERN Zenodo research publications (DOIs), national infrastructure platforms (PSO, MCB, Sukkur IBA), or academic background! 🚀";
 
   var isOpen     = false;
   var isLoading  = false;
@@ -1212,7 +1213,7 @@ document.querySelectorAll('.featured__cards .feat-card').forEach(function(card, 
     }
 
     if (query.indexOf('project') !== -1 || query.indexOf('work') !== -1 || query.indexOf('best') !== -1 || query.indexOf('built') !== -1 || query.indexOf('hyundai') !== -1) {
-      return "Lokesh has built 57+ live projects! Top flagship systems include: 1. Hyundai SmartDealership 360 (Vercel: hyundai-smartdealership-vercel.vercel.app) 2. Agri-Logistics IDAS Cloud Prototype 3. AIMH Wargaming Command HUD 4. Power Cement Line III KilnOptima HUD 5. Saudi Pak AgriInvest. Explore full catalog on lokeshkumar.me/projects.html!";
+      return "Lokesh's engineering work is structured into 4 Flagship Systems (Agri-IDAS Edge Telemetry, Dhatki Low-Resource NLP, Cyber-Extortion Defense Platform, and S-Jeewlani Gold E-Commerce), complemented by 12 National & Enterprise Platforms (including PSO FuelWatch, MCB SmartBank 360, Sukkur IBA Helpdesk, SHU MeritForge, and World Bank Treasury AI), plus 40+ specialized research repositories. Explore the full catalog at lokeshkumar.me/projects.html!";
     }
 
     if (query.indexOf('education') !== -1 || query.indexOf('college') !== -1 || query.indexOf('university') !== -1 || query.indexOf('gpa') !== -1 || query.indexOf('marks') !== -1 || query.indexOf('hsc') !== -1) {
@@ -1227,7 +1228,7 @@ document.querySelectorAll('.featured__cards .feat-card').forEach(function(card, 
       return "Lokesh is open for Software Engineering, Data Analytics, and AI/Telematics roles! Contact him via Email: lokeshsoni653@gmail.com | Phone/WhatsApp: 0303-3021048 | Portfolio: lokeshkumar.me";
     }
 
-    return "Lokesh Kumar is a final-year Software Engineering student specializing in automotive telematics, data engineering pipelines, and interactive web applications with 57+ live projects. How can I help you regarding his skills, projects, or background?";
+    return "Lokesh Kumar is a Software Engineering Researcher & Lead Systems Architect specializing in edge IoT telemetry, low-resource vernacular NLP, and socio-technical AI systems across the Global South. How can I help you regarding his research, flagship systems, or background?";
   }
 
   function openChat() {

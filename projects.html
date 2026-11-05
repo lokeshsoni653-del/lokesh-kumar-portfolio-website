@@ -289,23 +289,23 @@
 <!-- Project Stats Bar -->
 <div class="projects-stats-bar reveal">
   <div style="display:flex;align-items:center;gap:0.5rem">
-    <span class="projects-stats-bar__num" id="proj-total">94</span>
-    <span class="projects-stats-bar__label">Total Projects</span>
+    <span class="projects-stats-bar__num" id="proj-total">4</span>
+    <span class="projects-stats-bar__label">Flagship Systems (Tier 1)</span>
   </div>
   <span class="projects-stats-bar__sep">·</span>
   <div style="display:flex;align-items:center;gap:0.5rem">
-    <span class="projects-stats-bar__num" id="proj-prod">67</span>
-    <span class="projects-stats-bar__label">Production Grade</span>
+    <span class="projects-stats-bar__num" id="proj-prod">12</span>
+    <span class="projects-stats-bar__label">National Platforms (Tier 2)</span>
   </div>
   <span class="projects-stats-bar__sep">·</span>
   <div style="display:flex;align-items:center;gap:0.5rem">
-    <span class="projects-stats-bar__num" id="proj-res">27</span>
-    <span class="projects-stats-bar__label">Research / Explorations</span>
+    <span class="projects-stats-bar__num" id="proj-res">40</span>
+    <span class="projects-stats-bar__label">Auxiliary Repos (Tier 3)</span>
   </div>
   <span class="projects-stats-bar__sep">·</span>
   <div style="display:flex;align-items:center;gap:0.5rem">
-    <span class="projects-stats-bar__num">3</span>
-    <span class="projects-stats-bar__label">Deploy Platforms</span>
+    <span class="projects-stats-bar__num" id="proj-zenodo">4</span>
+    <span class="projects-stats-bar__label">CERN Zenodo DOIs</span>
   </div>
 </div>
 <!-- Deployment Banners Row -->
@@ -342,8 +342,197 @@
   </div>
 </div>
 <!-- CATEGORY A -->
-<h2 class="category-title" id="applied-engineering">Applied Engineering &amp; Production Projects</h2>
-<p class="category-subtitle">Production-grade applications, custom telemetry HUDs, and cloud systems engineered for corporate fellowships, internship selection boards, and departments.</p>
+
+<!-- ==============================================
+     TIER 1: FLAGSHIP RESEARCH & APPLIED SYSTEMS
+     ============================================== -->
+<div class="tier-section-header reveal" style="margin-top: 1.5rem; margin-bottom: 2rem;">
+  <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem; flex-wrap:wrap;">
+    <span class="tier-badge tier-badge--tier1">Tier 1 · Flagship Systems</span>
+    <span style="font-size:0.82rem; color:var(--clr-muted); font-weight:600;">Core Engineering Rigor &amp; Peer-Citable Research</span>
+  </div>
+  <h2 class="category-title" id="tier1-flagship" style="margin-top:0.25rem;">Tier 1: 4 Flagship Research &amp; Applied Systems</h2>
+  <p class="category-subtitle">The four foundational software engineering and cyber-physical systems engineered by Lokesh Kumar, backed by CERN Zenodo international DOIs, empirical field telemetry, and active operational deployment.</p>
+</div>
+
+<div class="projects-grid" style="margin-bottom: 4rem;">
+
+  <!-- TIER 1 CARD 1: Agri-IDAS Cyber-Physical Edge Telemetry -->
+  <div class="project-card reveal" style="grid-column: 1 / -1; border: 2px solid #0284c7; background: linear-gradient(135deg, rgba(2,132,199,0.08), rgba(30,58,138,0.03)); box-shadow: 0 4px 25px rgba(2,132,199,0.15);">
+    <div class="project-card__header" style="background: rgba(2, 132, 199, 0.1); border-bottom: 1px solid var(--clr-border);">
+      <div class="project-card__emoji">🌾</div>
+      <div class="project-card__meta">
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span class="tier-badge tier-badge--tier1">Tier 1 · Flagship Cyber-Physical System</span>
+          <span class="status-badge live" style="background: rgba(2, 132, 199, 0.15); color: #38bdf8; border-color: rgba(2, 132, 199, 0.3);">Live Simulation Portal</span>
+          <a href="https://doi.org/10.5281/zenodo.23970079" target="_blank" rel="noopener noreferrer" class="status-badge" style="background: rgba(14, 165, 233, 0.12); color: #38bdf8; border-color: rgba(14, 165, 233, 0.35); text-decoration: none;">DOI: 10.5281/zenodo.23970079 ↗</a>
+        </div>
+        <h3 class="project-card__title" style="margin-top: 0.35rem; font-size: 1.25rem;">Agri-IDAS: Arid Cyber-Physical Edge Telemetry &amp; Irrigation Control Pipeline</h3>
+        <div class="project-card__company">Sindh Agriculture University (SAU) • In Collaboration with Mehran UET &amp; SPO Pakistan</div>
+      </div>
+    </div>
+    <div class="project-card__body">
+      <div class="tech-stack-row">
+        <span class="tech-badge accent-badge" style="background:#0369a1; color:#FFF;">Lead Systems Architect</span>
+        <span class="tech-badge accent-badge">LoRa 868 MHz</span>
+        <span class="tech-badge accent-badge">Solar MPPT Edge Node</span>
+        <span class="tech-badge">SQLite Ring-Buffer</span>
+        <span class="tech-badge">Zero-Drop Telemetry</span>
+        <span class="tech-badge">GPRS Fallback</span>
+        <span class="tech-badge">InfluxDB Time-Series</span>
+      </div>
+      <p class="problem-solution">
+        <strong>Problem &amp; Engineering Solution:</strong> Arid desert zones like Tharparkar face extreme 48°C ambient heat, grid blackouts, and unmetered water waste. Agri-IDAS delivers an offline-first cyber-physical telemetry network utilizing sub-GHz LoRa (868 MHz), solar MPPT edge nodes, and a local SQLite ring-buffer to guarantee 99.4% telemetry integrity across 12-hour blackouts and 38.6% irrigation water conservation.
+      </p>
+      <ul class="impact-points">
+        <li><strong>Offline-First SQLite Ring Buffer:</strong> Autonomous localized data caching during severe 12+ hour cellular and grid blackouts with zero packet drop.</li>
+        <li><strong>Sub-GHz LoRa Transceivers:</strong> 5.2 km line-of-sight telemetry penetration across arid Thar sand dunes and dense foliage.</li>
+        <li><strong>Empirical Resource Savings:</strong> Validated 38.6% irrigation water savings and 17.07% road routing Haversine rectification (p = 0.0017).</li>
+      </ul>
+    </div>
+    <div class="project-card__footer">
+      <div class="project-card__actions">
+        <a class="project-card__btn primary" href="https://agri-idas.tech/" target="_blank" rel="noopener noreferrer" style="background: #0284c7; color: #fff; font-weight: 700;">Launch Agri-IDAS Portal ↗</a>
+        <a class="project-card__btn secondary" href="https://doi.org/10.5281/zenodo.23970079" target="_blank" rel="noopener noreferrer">View Paper / DOI ↗</a>
+        <a class="project-card__btn secondary" href="research.html#research">View Architecture Diagram ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 1 CARD 2: Dhatki-Agri-Intents Low-Resource NLP -->
+  <div class="project-card reveal" style="grid-column: 1 / -1; border: 2px solid #ec4899; background: linear-gradient(135deg, rgba(236,72,153,0.08), rgba(168,85,247,0.03)); box-shadow: 0 4px 25px rgba(236,72,153,0.15);">
+    <div class="project-card__header" style="background: rgba(236, 72, 153, 0.1); border-bottom: 1px solid var(--clr-border);">
+      <div class="project-card__emoji">🗣️</div>
+      <div class="project-card__meta">
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span class="tier-badge tier-badge--tier1">Tier 1 · Flagship Vernacular NLP</span>
+          <span class="status-badge live" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">Hugging Face Dataset</span>
+          <a href="https://doi.org/10.5281/zenodo.23958454" target="_blank" rel="noopener noreferrer" class="status-badge" style="background: rgba(236, 72, 153, 0.12); color: #f472b6; border-color: rgba(236, 72, 153, 0.35); text-decoration: none;">DOI: 10.5281/zenodo.23958454 ↗</a>
+        </div>
+        <h3 class="project-card__title" style="margin-top: 0.35rem; font-size: 1.25rem;">Dhatki-Agri-Intents: Low-Resource Vernacular NLP &amp; Edge Inference Pipeline</h3>
+        <div class="project-card__company">Lokesh Kumar (Sole Researcher) • Released on Hugging Face Hub</div>
+      </div>
+    </div>
+    <div class="project-card__body">
+      <div class="tech-stack-row">
+        <span class="tech-badge accent-badge" style="background:#be185d; color:#FFF;">Lead Researcher</span>
+        <span class="tech-badge accent-badge">Hugging Face Hub</span>
+        <span class="tech-badge accent-badge">Custom BPE Tokenizer</span>
+        <span class="tech-badge">INT8 Quantization</span>
+        <span class="tech-badge">89.4% Micro-F1</span>
+        <span class="tech-badge">14.2ms Edge CPU Latency</span>
+      </div>
+      <p class="problem-solution">
+        <strong>Problem &amp; Engineering Solution:</strong> Over 2.5 million native speakers of the Dhatki dialect in the Thar desert lack access to modern voice/text NLP interfaces due to extreme resource scarcity and lack of standardized orthography. This project curates the first 1,000-utterance agricultural intent corpus, benchmarks custom vernacular Byte-Pair Encoding (BPE), and deploys a quantized INT8 edge transformer delivering 89.4% Micro-F1 with 14.2 ms CPU inference.
+      </p>
+      <ul class="impact-points">
+        <li><strong>First Curated Dialect Corpus:</strong> 1,000 field agricultural intent pairs open-sourced on Hugging Face for global linguistics and AI research.</li>
+        <li><strong>Custom Vernacular BPE Tokenizer:</strong> Resolves out-of-vocabulary (OOV) dialect fragmentation without bloated multilingual vocabulary overhead.</li>
+        <li><strong>Edge-Deployable Inference:</strong> Quantized CPU runtime achieving 14.2 ms latency for real-time in-cab agricultural driver assistance.</li>
+      </ul>
+    </div>
+    <div class="project-card__footer">
+      <div class="project-card__actions">
+        <a class="project-card__btn primary" href="https://huggingface.co/datasets/lokeshsonara/dhatki-agri-intents" target="_blank" rel="noopener noreferrer" style="background: #ec4899; color: #fff; font-weight: 700;">Explore Hugging Face Dataset ↗</a>
+        <a class="project-card__btn secondary" href="https://doi.org/10.5281/zenodo.23958454" target="_blank" rel="noopener noreferrer">View Paper / DOI ↗</a>
+        <a class="project-card__btn secondary" href="research.html#research">View NLP Architecture ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 1 CARD 3: Cyber-Extortion Defense Platform -->
+  <div class="project-card reveal" style="grid-column: 1 / -1; border: 2px solid #dc2626; background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(185,28,28,0.03)); box-shadow: 0 4px 25px rgba(220,38,38,0.15);">
+    <div class="project-card__header" style="background: rgba(220, 38, 38, 0.1); border-bottom: 1px solid var(--clr-border);">
+      <div class="project-card__emoji">🛡️</div>
+      <div class="project-card__meta">
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span class="tier-badge tier-badge--tier1">Tier 1 · Flagship Socio-Technical System</span>
+          <span class="status-badge live" style="background: rgba(220, 38, 38, 0.15); color: #f87171; border-color: rgba(220, 38, 38, 0.3);">Policy &amp; Algorithmic Audit</span>
+          <a href="https://doi.org/10.5281/zenodo.23955391" target="_blank" rel="noopener noreferrer" class="status-badge" style="background: rgba(220, 38, 38, 0.12); color: #f87171; border-color: rgba(220, 38, 38, 0.35); text-decoration: none;">DOI: 10.5281/zenodo.23955391 ↗</a>
+        </div>
+        <h3 class="project-card__title" style="margin-top: 0.35rem; font-size: 1.25rem;">Cyber-Extortion Defense Platform: Predatory Microcredit Policy &amp; Algorithmic Audit</h3>
+        <div class="project-card__company">Strengthening Participatory Organisation (SPO) &amp; SAU Tandojam • Shewa Ram Suthar &amp; Lokesh Kumar</div>
+      </div>
+    </div>
+    <div class="project-card__body">
+      <div class="tech-stack-row">
+        <span class="tech-badge accent-badge" style="background:#b91c1c; color:#FFF;">Co-Author &amp; Systems Auditor</span>
+        <span class="tech-badge accent-badge">Algorithmic Reverse-Engineering</span>
+        <span class="tech-badge accent-badge">Cybercrime Policy</span>
+        <span class="tech-badge">FIA Enforcement Framework</span>
+        <span class="tech-badge">Digital Rights</span>
+      </div>
+      <p class="problem-solution">
+        <strong>Problem &amp; Engineering Solution:</strong> Unlicensed instant loan apps target vulnerable rural borrowers, using covert APK permissions to scrape contacts, photos, and location data to run organized blackmail and extortion networks. This initiative dissects malicious APK permission topologies, assesses mental health outcomes, and constructs a tripartite regulatory defense framework spanning FIA Cybercrime enforcement, SECP fintech licensing, and grassroots psychological interventions.
+      </p>
+      <ul class="impact-points">
+        <li><strong>Malicious APK Forensic Audit:</strong> Reverse-engineers predatory loan apps to expose illegal biometric and contact extraction mechanisms.</li>
+        <li><strong>Socio-Legal Policy Framework:</strong> Published as a peer-citable CERN Zenodo policy brief to guide provincial regulators and federal enforcement.</li>
+        <li><strong>Civil Society Implementation:</strong> Delivered in active operational collaboration with SPO Sindh field teams across Tharparkar and rural districts.</li>
+      </ul>
+    </div>
+    <div class="project-card__footer">
+      <div class="project-card__actions">
+        <a class="project-card__btn primary" href="https://doi.org/10.5281/zenodo.23955391" target="_blank" rel="noopener noreferrer" style="background: #dc2626; color: #fff; font-weight: 700;">View Paper / DOI ↗</a>
+        <a class="project-card__btn secondary" href="assets/Do_States_Eat_Their_Own_Thar_Suicide_Crisis_Policy_Brief.pdf" target="_blank" rel="noopener noreferrer">Download Policy Brief (PDF) ↗</a>
+        <a class="project-card__btn secondary" href="research.html#research">View Academic Dossier ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 1 CARD 4: S-Jeewlani Jewellers -->
+  <div class="project-card reveal" style="grid-column: 1 / -1; border: 2px solid #d4af37; background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(74,14,23,0.03)); box-shadow: 0 4px 25px rgba(212,175,55,0.15);">
+    <div class="project-card__header" style="background: rgba(212, 175, 55, 0.1); border-bottom: 1px solid var(--clr-border);">
+      <div class="project-card__emoji">👑</div>
+      <div class="project-card__meta">
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span class="tier-badge tier-badge--tier1">Tier 1 · Flagship Enterprise System</span>
+          <span class="status-badge live" style="background: rgba(212, 175, 55, 0.15); color: #f5d77f; border-color: rgba(212, 175, 55, 0.3);">Live Production Platform</span>
+        </div>
+        <h3 class="project-card__title" style="margin-top: 0.35rem; font-size: 1.25rem;">S-Jeewlani Jewellers: Enterprise Bullion E-Commerce &amp; Live Sarafa Sync Engine</h3>
+        <div class="project-card__company">Multi-Generational Family Jewelry House • Managed by Santosh Kumar (Mithi, Sindh)</div>
+      </div>
+    </div>
+    <div class="project-card__body">
+      <div class="tech-stack-row">
+        <span class="tech-badge accent-badge" style="background:#854d0e; color:#FFF;">Lead Systems Architect</span>
+        <span class="tech-badge accent-badge">Next.js 15 &amp; React</span>
+        <span class="tech-badge accent-badge">Live Sarafa Rate Engine</span>
+        <span class="tech-badge">24K / 22K Hallmarked Bullion</span>
+        <span class="tech-badge">WhatsApp Alert Engine</span>
+        <span class="tech-badge">Vercel Global CDN</span>
+      </div>
+      <p class="problem-solution">
+        <strong>Problem &amp; Engineering Solution:</strong> Regional gold buyers suffer from opaque pricing, unstandardized making charges, and lack of real-time market synchronization during intraday bullion volatility. S-Jeewlani Jewellers delivers a luxury e-commerce platform featuring an automated Sarafa rate engine, transparent making-charge formula calculator, hallmarked 24K/22K catalog, and automated WhatsApp rate subscription alerts.
+      </p>
+      <ul class="impact-points">
+        <li><strong>Automated Sarafa Sync Engine:</strong> Real-time pricing synchronized with daily bullion spot market indices across Sindh.</li>
+        <li><strong>Transparent Price Formula:</strong> Real-time calculation showing gold base weight, making charges, and taxes with zero hidden fees.</li>
+        <li><strong>Enterprise E-Commerce Architecture:</strong> Multi-currency catalog, insured shipping logistics, and WhatsApp push alert subscriptions.</li>
+      </ul>
+    </div>
+    <div class="project-card__footer">
+      <div class="project-card__actions">
+        <a class="project-card__btn primary" href="https://www.sjeewlanijewellers.com/" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(135deg, #4a0e17 0%, #d4af37 100%); color: #fff; font-weight: 700;">Launch S-Jeewlani Store ↗</a>
+        <a class="project-card__btn secondary" href="https://github.com/lokeshsoni653-del/S-Jeewlani-Jewellers" target="_blank" rel="noopener noreferrer">View Repository (GitHub) ↗</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ==============================================
+     TIER 2: NATIONAL INFRASTRUCTURE & ENTERPRISE
+     ============================================== -->
+<div class="tier-section-header reveal" style="margin-top: 4.5rem; margin-bottom: 2rem;">
+  <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem; flex-wrap:wrap;">
+    <span class="tier-badge tier-badge--tier2">Tier 2 · National &amp; Enterprise</span>
+    <span style="font-size:0.82rem; color:var(--clr-muted); font-weight:600;">Production Platforms &amp; Institutional Systems</span>
+  </div>
+  <h2 class="category-title" id="tier2-national" style="margin-top:0.25rem;">Tier 2: National Infrastructure, Civic Tech &amp; Enterprise Systems</h2>
+  <p class="category-subtitle">Production-grade web engines, operational HUDs, and financial analytics platforms engineered for national organizations (PSO, MCB Bank, Sukkur IBA, World Bank HQ), corporate fellowships, and public civic access.</p>
+</div>
+
 <div class="projects-grid" style="margin-bottom: 4rem;">
 
 <!-- World Bank Group Treasury AI Showcase Card -->
@@ -351,7 +540,7 @@
   <div class="project-card__header" style="background: rgba(2, 132, 199, 0.08); border-bottom: 1px solid var(--clr-border);">
     <div class="project-card__emoji">🌐</div>
     <div class="project-card__meta">
-      <span class="status-badge live" style="background: rgba(2, 132, 199, 0.15); color: #38bdf8; border-color: rgba(2, 132, 199, 0.3);">Featured Sovereign Financial Tech</span>
+      <span class="tier-badge tier-badge--tier2">Tier 2 Platform</span> <span class="status-badge live" style="background: rgba(2, 132, 199, 0.15); color: #38bdf8; border-color: rgba(2, 132, 199, 0.3);">Featured Sovereign Financial Tech</span>
       <h3 class="project-card__title" style="margin-top: 0.25rem;">World Bank Group (HQ) — Sovereign Treasury AI &amp; Financial Engine</h3>
       <div class="project-card__company">World Bank Group HQ (Treasury Pioneers Program req38076) • Washington, D.C.</div>
     </div>
@@ -386,7 +575,7 @@
   <div class="project-card__header" style="background: rgba(5, 150, 105, 0.08); border-bottom: 1px solid var(--clr-border);">
     <div class="project-card__emoji">🏢</div>
     <div class="project-card__meta">
-      <span class="status-badge live" style="background: rgba(5, 150, 105, 0.15); color: #34d399; border-color: rgba(5, 150, 105, 0.3);">Featured Sales Engineering System</span>
+      <span class="tier-badge tier-badge--tier2">Tier 2 Platform</span> <span class="status-badge live" style="background: rgba(5, 150, 105, 0.15); color: #34d399; border-color: rgba(5, 150, 105, 0.3);">Featured Sales Engineering System</span>
       <h3 class="project-card__title" style="margin-top: 0.25rem;">Framing Ideas LLC — Interactive Client Proposal &amp; Cost Estimator</h3>
       <div class="project-card__company">Framing Ideas LLC (Sales Trainee / Summership 2026) • Digital Design Agency</div>
     </div>
@@ -421,7 +610,7 @@
   <div class="project-card__header" style="background: rgba(59, 130, 246, 0.08); border-bottom: 1px solid var(--clr-border);">
     <div class="project-card__emoji">⚖️</div>
     <div class="project-card__meta">
-      <span class="status-badge live" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">Featured AI Legal Tech Platform</span>
+      <span class="tier-badge tier-badge--tier2">Tier 2 Platform</span> <span class="status-badge live" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">Featured AI Legal Tech Platform</span>
       <h3 class="project-card__title" style="margin-top: 0.25rem;">NexusOmni: AI Contract Risk Scoring &amp; Legal Clause Analyzer</h3>
       <div class="project-card__company">Legal Tech AI &amp; Risk Intelligence Engine • Deployed live on Vercel</div>
     </div>
@@ -2383,8 +2572,14 @@
 
 </div>
 <!-- CATEGORY B -->
-<h2 class="category-title" id="personal-explorations">Personal Explorations &amp; Prototypes</h2>
-<p class="category-subtitle">Self-motivated research tools, natural language processing models, regional data dashboards, and proactive technical experiments.</p>
+<div class="tier-section-header reveal" style="margin-top: 4.5rem; margin-bottom: 2rem;">
+  <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem; flex-wrap:wrap;">
+    <span class="tier-badge tier-badge--tier3">Tier 3 · Auxiliary Repositories</span>
+    <span style="font-size:0.82rem; color:var(--clr-muted); font-weight:600;">Experimental Labs &amp; Open-Source Tooling</span>
+  </div>
+  <h2 class="category-title" id="tier3-auxiliary" style="margin-top:0.25rem;">Tier 3: 40+ Auxiliary Repositories &amp; Experimental Labs</h2>
+  <p class="category-subtitle">Specialized open-source tools, interactive Streamlit prototypes, data parsers, and pedagogical demos developed for rapid scientific verification, university coursework, and open engineering exploration.</p>
+</div>
 <div class="projects-grid" style="margin-bottom: 4rem;">
 <!-- Dhatki Autonomous Chatbot &amp; Translation Tools -->
 <div class="project-card reveal" style="grid-column: 1 / -1; border-color: var(--clr-accent);">
@@ -3232,7 +3427,7 @@ document.querySelectorAll('.projects-grid .project-card').forEach(function(card,
   card.style.transitionDelay = ((i % 3) * 0.07) + 's';
 });
 /* Count-up for stats bar */
-[['proj-total',94],['proj-prod',67],['proj-res',27]].forEach(function(pair) {
+[['proj-total',4],['proj-prod',12],['proj-res',40],['proj-zenodo',4]].forEach(function(pair) {
   var el = document.getElementById(pair[0]);
   if (!el) return;
   var started = false;
@@ -3356,7 +3551,7 @@ document.querySelectorAll('.projects-grid .project-card').forEach(function(card,
 <script>
 (function() {
   var CHAT_API_URL = 'https://lokesh-portfolio-bot.vercel.app/api/chat';
-  var GREETING = "Hi! I'm Lokesh's AI assistant. I know everything about his 57+ projects, skills, experience, and availability. What would you like to know? 🚀";
+  var GREETING = "Hi! I'm Lokesh's AI assistant. Ask me about his 4 Flagship Engineering Systems, 4 CERN Zenodo research publications (DOIs), national infrastructure platforms (PSO, MCB, Sukkur IBA), or academic background! 🚀";
 
   var isOpen     = false;
   var isLoading  = false;
@@ -3415,7 +3610,7 @@ document.querySelectorAll('.projects-grid .project-card').forEach(function(card,
     }
 
     if (query.indexOf('project') !== -1 || query.indexOf('work') !== -1 || query.indexOf('best') !== -1 || query.indexOf('built') !== -1 || query.indexOf('hyundai') !== -1) {
-      return "Lokesh has built 57+ live projects! Top flagship systems include: 1. Hyundai SmartDealership 360 (Vercel: hyundai-smartdealership-vercel.vercel.app) 2. Agri-Logistics IDAS Cloud Prototype 3. AIMH Wargaming Command HUD 4. Power Cement Line III KilnOptima HUD 5. Saudi Pak AgriInvest. Explore full catalog on lokeshkumar.me/projects.html!";
+      return "Lokesh's engineering work is structured into 4 Flagship Systems (Agri-IDAS Edge Telemetry, Dhatki Low-Resource NLP, Cyber-Extortion Defense Platform, and S-Jeewlani Gold E-Commerce), complemented by 12 National & Enterprise Platforms (including PSO FuelWatch, MCB SmartBank 360, Sukkur IBA Helpdesk, SHU MeritForge, and World Bank Treasury AI), plus 40+ specialized research repositories. Explore the full catalog at lokeshkumar.me/projects.html!";
     }
 
     if (query.indexOf('education') !== -1 || query.indexOf('college') !== -1 || query.indexOf('university') !== -1 || query.indexOf('gpa') !== -1 || query.indexOf('marks') !== -1 || query.indexOf('hsc') !== -1) {
@@ -3430,7 +3625,7 @@ document.querySelectorAll('.projects-grid .project-card').forEach(function(card,
       return "Lokesh is open for Software Engineering, Data Analytics, and AI/Telematics roles! Contact him via Email: lokeshsoni653@gmail.com | Phone/WhatsApp: 0303-3021048 | Portfolio: lokeshkumar.me";
     }
 
-    return "Lokesh Kumar is a final-year Software Engineering student specializing in automotive telematics, data engineering pipelines, and interactive web applications with 57+ live projects. How can I help you regarding his skills, projects, or background?";
+    return "Lokesh Kumar is a Software Engineering Researcher & Lead Systems Architect specializing in edge IoT telemetry, low-resource vernacular NLP, and socio-technical AI systems across the Global South. How can I help you regarding his research, flagship systems, or background?";
   }
 
   function openChat() {

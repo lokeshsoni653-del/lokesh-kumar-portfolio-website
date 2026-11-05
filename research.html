@@ -112,6 +112,16 @@
   <div class="container">
         <div class="research-stack">
       <!-- CERN ZENODO PUBLICATIONS SECTION -->
+      
+      <!-- Open-Science Peer-Review & Archival Transparency Notice -->
+      <div class="scholarly-transparency-box reveal">
+        <span class="icon">🔬</span>
+        <div>
+          <strong>Open-Science Transparency &amp; Archival Rigor Statement:</strong>
+          The publications cataloged below represent <strong>peer-citable technical preprints, empirical engineering blueprints, and socio-technical whitepapers</strong> permanently archived in the <strong>CERN Zenodo Open Research Archive</strong> with persistent DataCite international DOIs. In strict alignment with open-science standards, all manuscripts provide unredacted methodologies, empirical field telemetry datasets, or reproducible benchmark scripts for international scholarly scrutiny and graduate research admissions review.
+        </div>
+      </div>
+
       <div class="sec-header reveal" style="text-align: center; margin-bottom: 2.25rem;">
         <p class="label sec-header__label">CERN Zenodo Open Research Archive</p>
         <h2 class="sec-header__title" style="font-size: clamp(1.6rem, 3.2vw, 2.2rem);">Peer-Citable Research Publications &amp; International DOIs</h2>
@@ -153,6 +163,129 @@
           <span class="tech-pill" style="font-size: 0.76rem;">🌾 Precision Agriculture</span>
           <span class="tech-pill" style="font-size: 0.76rem;">🏜️ Arid Systems</span>
           <span class="tech-pill" style="font-size: 0.76rem;">📻 LoRa Sub-GHz</span>
+        </div>
+
+        
+        <!-- Systems Architecture Diagram: Agri-IDAS Edge Telemetry Blueprint -->
+        <div class="arch-diagram-card reveal">
+          <div class="arch-diagram-header">
+            <div class="arch-diagram-title">
+              <span>📐</span> Systems Architecture Blueprint: Agri-IDAS Cyber-Physical Telemetry Pipeline
+            </div>
+            <span class="arch-diagram-badge">Peer-Citable Architecture · DOI: 10.5281/zenodo.23970079</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--clr-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+            End-to-end hardware-software pipeline engineered for extreme arid environments (Thar Desert, 48°C). Implements a zero-drop offline-first telemetry ring buffer with sub-GHz LoRa transmission, solar MPPT harvesting, and GPRS backhaul.
+          </p>
+          <div class="arch-diagram-container">
+            <svg class="arch-diagram-svg" viewBox="0 0 1080 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gradSensors" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0284c7" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#0369a1" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradMcu" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#059669" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradLoRa" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradGateway" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d97706" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradCloud" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+                </linearGradient>
+                <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+                  <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.25"/>
+                </filter>
+                <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#38bdf8"/>
+                </marker>
+              </defs>
+
+              <!-- STAGE 1: Perception & Sensing -->
+              <g filter="url(#shadow)">
+                <rect x="15" y="20" width="185" height="195" rx="10" fill="url(#gradSensors)" stroke="#0284c7" stroke-width="1.5"/>
+                <rect x="25" y="30" width="165" height="26" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+                <text x="107" y="47" text-anchor="middle" fill="#38bdf8" font-size="11" font-weight="700" letter-spacing="0.5">1. SENSING LAYER</text>
+                <text x="35" y="80" fill="#e2e8f0" font-size="11" font-weight="600">🌱 Soil VWC Probes</text>
+                <text x="35" y="98" fill="#94a3b8" font-size="9.5">10cm, 30cm, 50cm Depth</text>
+                <text x="35" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🌡️ SHT31 Canopy</text>
+                <text x="35" y="143" fill="#94a3b8" font-size="9.5">Temp &amp; Rel Humidity</text>
+                <text x="35" y="170" fill="#e2e8f0" font-size="11" font-weight="600">☀️ Pyranometer</text>
+                <text x="35" y="188" fill="#94a3b8" font-size="9.5">Solar Radiation &amp; Lux</text>
+              </g>
+
+              <!-- Arrow 1 -> 2 -->
+              <line x1="200" y1="117" x2="230" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 2: Edge Transceiver Node -->
+              <g filter="url(#shadow)">
+                <rect x="235" y="20" width="185" height="195" rx="10" fill="url(#gradMcu)" stroke="#059669" stroke-width="1.5"/>
+                <rect x="245" y="30" width="165" height="26" rx="6" fill="#059669" fill-opacity="0.2"/>
+                <text x="327" y="47" text-anchor="middle" fill="#34d399" font-size="11" font-weight="700" letter-spacing="0.5">2. FIELD EDGE NODE</text>
+                <text x="255" y="80" fill="#e2e8f0" font-size="11" font-weight="600">⚡ ESP32-S3 / STM32</text>
+                <text x="255" y="98" fill="#94a3b8" font-size="9.5">Ultra-Low Power Deep Sleep</text>
+                <text x="255" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🔋 Solar MPPT Circuit</text>
+                <text x="255" y="143" fill="#94a3b8" font-size="9.5">LiFePO4 Power Harvester</text>
+                <text x="255" y="170" fill="#e2e8f0" font-size="11" font-weight="600">⏱️ Duty Cycle Engine</text>
+                <text x="255" y="188" fill="#94a3b8" font-size="9.5">5-Min Sampling Burst</text>
+              </g>
+
+              <!-- Arrow 2 -> 3 -->
+              <line x1="420" y1="117" x2="450" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 3: Sub-GHz Wireless LoRa -->
+              <g filter="url(#shadow)">
+                <rect x="455" y="20" width="170" height="195" rx="10" fill="url(#gradLoRa)" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="465" y="30" width="150" height="26" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
+                <text x="540" y="47" text-anchor="middle" fill="#c084fc" font-size="11" font-weight="700" letter-spacing="0.5">3. SUB-GHz LoRa PHY</text>
+                <text x="475" y="80" fill="#e2e8f0" font-size="11" font-weight="600">📡 868 MHz Frequency</text>
+                <text x="475" y="98" fill="#94a3b8" font-size="9.5">Penetrates Sand &amp; Foliage</text>
+                <text x="475" y="125" fill="#e2e8f0" font-size="11" font-weight="600">📍 5.2 km Line-of-Sight</text>
+                <text x="475" y="143" fill="#94a3b8" font-size="9.5">Thar Arid Farmland Range</text>
+                <text x="475" y="170" fill="#e2e8f0" font-size="11" font-weight="600">🔒 CRC + FEC Check</text>
+                <text x="475" y="188" fill="#94a3b8" font-size="9.5">99.4% Packet Integrity</text>
+              </g>
+
+              <!-- Arrow 3 -> 4 -->
+              <line x1="625" y1="117" x2="655" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 4: Edge Gateway & Offline Buffer -->
+              <g filter="url(#shadow)">
+                <rect x="660" y="20" width="195" height="195" rx="10" fill="url(#gradGateway)" stroke="#d97706" stroke-width="1.5"/>
+                <rect x="670" y="30" width="175" height="26" rx="6" fill="#d97706" fill-opacity="0.2"/>
+                <text x="757" y="47" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" letter-spacing="0.5">4. GATEWAY &amp; BUFFER</text>
+                <text x="680" y="80" fill="#e2e8f0" font-size="11" font-weight="600">🗄️ SQLite Ring-Buffer</text>
+                <text x="680" y="98" fill="#94a3b8" font-size="9.5">Zero-Drop 12hr Blackout Cache</text>
+                <text x="680" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🤖 Local Valve Decision</text>
+                <text x="680" y="143" fill="#94a3b8" font-size="9.5">Evapotranspiration Trigger</text>
+                <text x="680" y="170" fill="#e2e8f0" font-size="11" font-weight="600">📶 GPRS / 2G Fallback</text>
+                <text x="680" y="188" fill="#94a3b8" font-size="9.5">Auto-Sync on Connectivity</text>
+              </g>
+
+              <!-- Arrow 4 -> 5 -->
+              <line x1="855" y1="117" x2="885" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 5: Cloud & Web Dashboard -->
+              <g filter="url(#shadow)">
+                <rect x="890" y="20" width="175" height="195" rx="10" fill="url(#gradCloud)" stroke="#2563eb" stroke-width="1.5"/>
+                <rect x="900" y="30" width="155" height="26" rx="6" fill="#2563eb" fill-opacity="0.2"/>
+                <text x="977" y="47" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="700" letter-spacing="0.5">5. CLOUD &amp; HUD</text>
+                <text x="910" y="80" fill="#e2e8f0" font-size="11" font-weight="600">☁️ InfluxDB Cloud</text>
+                <text x="910" y="98" fill="#94a3b8" font-size="9.5">High-Frequency Time-Series</text>
+                <text x="910" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🌾 Agri-IDAS Portal</text>
+                <text x="910" y="143" fill="#94a3b8" font-size="9.5">agri-idas.tech Telemetry HUD</text>
+                <text x="910" y="170" fill="#e2e8f0" font-size="11" font-weight="600">💧 38.6% Water Saved</text>
+                <text x="910" y="188" fill="#94a3b8" font-size="9.5">Precision Drip Actuation</text>
+              </g>
+            </svg>
+          </div>
         </div>
 
         <div class="research-actions">
@@ -253,6 +386,123 @@
           <span class="tech-pill" style="font-size: 0.76rem;">🤖 Transformers</span>
           <span class="tech-pill" style="font-size: 0.76rem;">🏜️ Dhatki Dialect</span>
           <span class="tech-pill" style="font-size: 0.76rem;">🤗 Hugging Face</span>
+        </div>
+
+        
+        <!-- Systems Architecture Diagram: Dhatki Low-Resource NLP Pipeline -->
+        <div class="arch-diagram-card reveal">
+          <div class="arch-diagram-header">
+            <div class="arch-diagram-title">
+              <span>📐</span> Systems Architecture Blueprint: Low-Resource Vernacular NLP &amp; Edge Inference Pipeline
+            </div>
+            <span class="arch-diagram-badge">Peer-Citable Architecture · DOI: 10.5281/zenodo.23958454</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--clr-muted); margin-bottom: 1.25rem; line-height: 1.6;">
+            End-to-end vernacular NLP pipeline engineered for unstandardized Indo-Aryan dialects (Dhatki). Benchmarks custom vernacular Byte-Pair Encoding (BPE) against pre-trained multilingual transformers, achieving 89.4% Micro-F1 with 14.2 ms edge CPU latency.
+          </p>
+          <div class="arch-diagram-container">
+            <svg class="arch-diagram-svg" viewBox="0 0 1080 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gradNlp1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#d97706" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradNlp2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#be185d" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradNlp3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradNlp4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#059669" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="gradNlp5" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+                  <stop offset="100%" stop-color="#0891b2" stop-opacity="0.1"/>
+                </linearGradient>
+              </defs>
+
+              <!-- STAGE 1: Utterance Corpus -->
+              <g filter="url(#shadow)">
+                <rect x="15" y="20" width="185" height="195" rx="10" fill="url(#gradNlp1)" stroke="#f59e0b" stroke-width="1.5"/>
+                <rect x="25" y="30" width="165" height="26" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+                <text x="107" y="47" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700" letter-spacing="0.5">1. VERNACULAR CORPUS</text>
+                <text x="35" y="80" fill="#e2e8f0" font-size="11" font-weight="600">🎙️ Dhatki Field Audio</text>
+                <text x="35" y="98" fill="#94a3b8" font-size="9.5">Raw Farmer Utterances</text>
+                <text x="35" y="125" fill="#e2e8f0" font-size="11" font-weight="600">📚 1,000 Pair Corpus</text>
+                <text x="35" y="143" fill="#94a3b8" font-size="9.5">Multi-Class Agri Intents</text>
+                <text x="35" y="170" fill="#e2e8f0" font-size="11" font-weight="600">🤗 Hugging Face Hub</text>
+                <text x="35" y="188" fill="#94a3b8" font-size="9.5">Open-Source Registry</text>
+              </g>
+
+              <!-- Arrow 1 -> 2 -->
+              <line x1="200" y1="117" x2="230" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 2: Normalization & BPE -->
+              <g filter="url(#shadow)">
+                <rect x="235" y="20" width="185" height="195" rx="10" fill="url(#gradNlp2)" stroke="#ec4899" stroke-width="1.5"/>
+                <rect x="245" y="30" width="165" height="26" rx="6" fill="#ec4899" fill-opacity="0.2"/>
+                <text x="327" y="47" text-anchor="middle" fill="#f472b6" font-size="11" font-weight="700" letter-spacing="0.5">2. BPE TOKENIZATION</text>
+                <text x="255" y="80" fill="#e2e8f0" font-size="11" font-weight="600">🔤 Script Normalizer</text>
+                <text x="255" y="98" fill="#94a3b8" font-size="9.5">Sindhi-Arabic Orthography</text>
+                <text x="255" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🧩 Custom Vernacular BPE</text>
+                <text x="255" y="143" fill="#94a3b8" font-size="9.5">Subword Vocabulary (3.2k)</text>
+                <text x="255" y="170" fill="#e2e8f0" font-size="11" font-weight="600">🛡️ OOV Rate Reduction</text>
+                <text x="255" y="188" fill="#94a3b8" font-size="9.5">Mitigates Out-of-Vocab Drift</text>
+              </g>
+
+              <!-- Arrow 2 -> 3 -->
+              <line x1="420" y1="117" x2="450" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 3: Quantized Transformer -->
+              <g filter="url(#shadow)">
+                <rect x="455" y="20" width="170" height="195" rx="10" fill="url(#gradNlp3)" stroke="#8b5cf6" stroke-width="1.5"/>
+                <rect x="465" y="30" width="150" height="26" rx="6" fill="#8b5cf6" fill-opacity="0.2"/>
+                <text x="540" y="47" text-anchor="middle" fill="#c084fc" font-size="11" font-weight="700" letter-spacing="0.5">3. MODEL BACKBONE</text>
+                <text x="475" y="80" fill="#e2e8f0" font-size="11" font-weight="600">🤖 DistilBERT / IndicBERT</text>
+                <text x="475" y="98" fill="#94a3b8" font-size="9.5">Fine-Tuned Domain Attention</text>
+                <text x="475" y="125" fill="#e2e8f0" font-size="11" font-weight="600">⚡ Post-Training INT8</text>
+                <text x="475" y="143" fill="#94a3b8" font-size="9.5">Quantization for Edge CPU</text>
+                <text x="475" y="170" fill="#e2e8f0" font-size="11" font-weight="600">⚖️ Lexical Comparison</text>
+                <text x="475" y="188" fill="#94a3b8" font-size="9.5">TF-IDF &amp; SVM Benchmarks</text>
+              </g>
+
+              <!-- Arrow 3 -> 4 -->
+              <line x1="625" y1="117" x2="655" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 4: Intent Classifier -->
+              <g filter="url(#shadow)">
+                <rect x="660" y="20" width="195" height="195" rx="10" fill="url(#gradNlp4)" stroke="#10b981" stroke-width="1.5"/>
+                <rect x="670" y="30" width="175" height="26" rx="6" fill="#10b981" fill-opacity="0.2"/>
+                <text x="757" y="47" text-anchor="middle" fill="#34d399" font-size="11" font-weight="700" letter-spacing="0.5">4. INTENT CLASSIFICATION</text>
+                <text x="680" y="80" fill="#e2e8f0" font-size="11" font-weight="600">🎯 89.4% Micro-F1 Score</text>
+                <text x="680" y="98" fill="#94a3b8" font-size="9.5">State-of-the-Art on Dhatki</text>
+                <text x="680" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🌾 9 Agri Intent Classes</text>
+                <text x="680" y="143" fill="#94a3b8" font-size="9.5">Pest, Irrigation, Mandi, Rain</text>
+                <text x="680" y="170" fill="#e2e8f0" font-size="11" font-weight="600">📊 Robust Confusion Matrix</text>
+                <text x="680" y="188" fill="#94a3b8" font-size="9.5">Low Dialect Cross-Contamination</text>
+              </g>
+
+              <!-- Arrow 4 -> 5 -->
+              <line x1="855" y1="117" x2="885" y2="117" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arr)"/>
+
+              <!-- STAGE 5: Edge Deployment -->
+              <g filter="url(#shadow)">
+                <rect x="890" y="20" width="175" height="195" rx="10" fill="url(#gradNlp5)" stroke="#06b6d4" stroke-width="1.5"/>
+                <rect x="900" y="30" width="155" height="26" rx="6" fill="#06b6d4" fill-opacity="0.2"/>
+                <text x="977" y="47" text-anchor="middle" fill="#22d3ee" font-size="11" font-weight="700" letter-spacing="0.5">5. EDGE RUNTIME</text>
+                <text x="910" y="80" fill="#e2e8f0" font-size="11" font-weight="600">⏱️ 14.2 ms CPU Latency</text>
+                <text x="910" y="98" fill="#94a3b8" font-size="9.5">Real-Time In-Cab Inference</text>
+                <text x="910" y="125" fill="#e2e8f0" font-size="11" font-weight="600">🚗 Driver Co-Pilot</text>
+                <text x="910" y="143" fill="#94a3b8" font-size="9.5">Sub-Second Audio Turnaround</text>
+                <text x="910" y="170" fill="#e2e8f0" font-size="11" font-weight="600">📱 Zero Cloud Latency</text>
+                <text x="910" y="188" fill="#94a3b8" font-size="9.5">Offline Arid Zone Operation</text>
+              </g>
+            </svg>
+          </div>
         </div>
 
         <div class="research-actions">
@@ -1067,7 +1317,7 @@
 <script>
 (function() {
   var CHAT_API_URL = 'https://lokesh-portfolio-bot.vercel.app/api/chat';
-  var GREETING = "Hi! I'm Lokesh's AI assistant. Ask me about his IEEE TechRxiv paper, EPICS grant, edge AI, or 57+ software projects! 🚀";
+  var GREETING = "Hi! I'm Lokesh's AI assistant. Ask me about his 4 Flagship Engineering Systems, 4 CERN Zenodo research publications (DOIs), national infrastructure platforms, or academic background! 🚀";
 
   var isOpen     = false;
   var isLoading  = false;
@@ -1127,7 +1377,7 @@
       return "Lokesh is a specialist in Python & Data Engineering! His primary skills include: Python (Pandas, NumPy, NetworkX, Matplotlib, Streamlit, Folium/Leaflet GIS, NLP/RAG pipelines), JavaScript ES6+, SQL, HTML5/CSS3, Docker, and Cloud Deployments (GCP, Vercel, Netlify).";
     }
     if (query.indexOf('project') !== -1 || query.indexOf('work') !== -1 || query.indexOf('best') !== -1 || query.indexOf('built') !== -1 || query.indexOf('hyundai') !== -1) {
-      return "Lokesh has built 57+ live projects! Top flagship systems include: 1. Hyundai SmartDealership 360 (Vercel) 2. Agri-Logistics IDAS Cloud Prototype 3. AIMH Wargaming Command HUD 4. Power Cement Line III KilnOptima HUD 5. Saudi Pak AgriInvest. Explore full catalog on lokeshkumar.me/projects.html!";
+      return "Lokesh's engineering work is structured into 4 Flagship Systems (Agri-IDAS Edge Telemetry, Dhatki Low-Resource NLP, Cyber-Extortion Defense Platform, and S-Jeewlani Gold E-Commerce), complemented by 12 National & Enterprise Platforms (including PSO FuelWatch, MCB SmartBank 360, Sukkur IBA Helpdesk, SHU MeritForge, and World Bank Treasury AI), plus 40+ specialized research repositories. Explore the full catalog at lokeshkumar.me/projects.html!";
     }
     if (query.indexOf('education') !== -1 || query.indexOf('college') !== -1 || query.indexOf('university') !== -1 || query.indexOf('gpa') !== -1 || query.indexOf('marks') !== -1) {
       return "Education & Academic Record: Sindh Agriculture University, Tando Jam — BS Software Engineering (Final Year, CGPA 3.00). BISE Mirpurkhas HSC Intermediate — 1036 / 1100 (94.18% Grade A-1 from Govt. Degree College Mithi).";
