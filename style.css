@@ -1964,6 +1964,30 @@ html, body {
   color: #38bdf8;
 }
 
+.btn-research-outline--audit {
+  border-color: #0284c7;
+  color: #0369a1;
+  background: rgba(2, 132, 199, 0.08);
+}
+
+.btn-research-outline--audit:hover {
+  border-color: #0369a1;
+  color: #0c4a6e;
+  background: rgba(2, 132, 199, 0.14);
+}
+
+[data-theme="dark"] .btn-research-outline--audit {
+  border-color: rgba(56, 189, 248, 0.48);
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+[data-theme="dark"] .btn-research-outline--audit:hover {
+  border-color: #7dd3fc;
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.18);
+}
+
 .btn-research-bibtex {
   display: inline-flex;
   align-items: center;
